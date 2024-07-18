@@ -64,12 +64,18 @@ const Hero = () => {
   let counter = 0;
 
   useEffect(() => {
-    if (prefersReducedMotion) {return;}
+    if (prefersReducedMotion) {
+      return;
+    }
 
     const interval = setInterval(() => {
       setDisplayText(prevText => {
-        if (prevText === 'web2') {return 'web_ ';}
-        if (prevText === 'web3') {return 'web_ ';} else {
+        if (prevText === 'web2') {
+          return 'web_';
+        }
+        if (prevText === 'web3') {
+          return 'web_';
+        } else {
           if (counter++ % 2 === 0) {
             return 'web2';
           }
