@@ -125,8 +125,18 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'Eleventy', 'Node.js', 'WordPress'];
-
+  const skills = [
+    'Java',
+    'JavaScript (ES6+)',
+    'TypeScript',
+    'React',
+    'Spring Boot',
+    'Node.js',
+    'MongoDB',
+    'MySQL',
+    'Elasticsearch',
+    'Kafka',
+  ];
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
       <h2 className="numbered-heading">About Me</h2>
@@ -135,30 +145,21 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Brittany and I enjoy creating things that live on the internet. My
-              interest in web development started back in 2012 when I decided to try editing custom
-              Tumblr themes — turns out hacking together a custom reblog button taught me a lot
-              about HTML &amp; CSS!
+              Hello! My name is Sayan Kar, and I'm passionate about building impactful digital
+              solutions. My journey in software development began during my college years at IIIT
+              Guwahati, where I pursued my Bachelors in Computer Science and Engineering, graduating
+              with a strong foundation in coding and problem-solving. I have a keen interest in
+              designing robust backend systems and exploring blockchain technologies to innovate and
+              create secure, decentralized solutions.
             </p>
 
             <p>
               Fast-forward to today, and I’ve had the privilege of working at{' '}
-              <a href="https://us.mullenlowe.com/">an advertising agency</a>,{' '}
-              <a href="https://starry.com/">a start-up</a>,{' '}
-              <a href="https://www.apple.com/">a huge corporation</a>, and{' '}
-              <a href="https://scout.camd.northeastern.edu/">a student-led design studio</a>. My
-              main focus these days is building accessible, inclusive products and digital
-              experiences at <a href="https://upstatement.com/">Upstatement</a> for a variety of
-              clients.
-            </p>
-
-            <p>
-              I also recently{' '}
-              <a href="https://www.newline.co/courses/build-a-spotify-connected-app">
-                launched a course
-              </a>{' '}
-              that covers everything you need to build a web app with the Spotify API using Node
-              &amp; React.
+              <a href="https://www.toppr.com/"> Toppr</a>,{' '}
+              <a href="https://www.byjus.com/"> Byjus</a> an edtech startup. My primary focus these
+              days is improving our Chrome extension at{' '}
+              <a href="https://www.regie.ai/"> Regie.ai</a> to deliver a seamless user experience
+              and focusing on our product, Autopilot.
             </p>
 
             <p>Here are a few technologies I’ve been working with recently:</p>
@@ -173,7 +174,7 @@ const About = () => {
           <div className="wrapper">
             <StaticImage
               className="img"
-              src="../../images/me.jpg"
+              src="../../images/me.jpeg"
               width={500}
               quality={95}
               formats={['AUTO', 'WEBP', 'AVIF']}

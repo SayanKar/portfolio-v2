@@ -16,6 +16,7 @@ import {
   IconStar,
   IconTwitter,
 } from '@components/icons';
+import IconYoutube from './youtube';
 
 const Icon = ({ name }) => {
   switch (name) {
@@ -33,6 +34,8 @@ const Icon = ({ name }) => {
       return <IconFork />;
     case 'GitHub':
       return <IconGitHub />;
+    case 'Youtube':
+      return <IconYoutube />;
     case 'Instagram':
       return <IconInstagram />;
     case 'Linkedin':
