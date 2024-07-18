@@ -6,7 +6,7 @@ module.exports = {
     description:
       'Sayan Kar is a software engineer specializing in full-stack development and backend systems.',
     siteUrl: 'https://sayankar.com', // No trailing slash allowed!
-    image: '/og.png', // Path to your image you placed in the 'static' folder
+    image: '/og.jpeg', // Path to your image you placed in the 'static' folder
     twitterUsername: '@Sayan1308Kar',
   },
   plugins: [

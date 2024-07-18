@@ -2,7 +2,7 @@
 date: '2021-10-27'
 title: 'Avalanche AMM'
 github: 'https://github.com/SayanKar/avalanche-amm'
-external: 'https://learn.figment.io/tutorials/create-an-amm-on-avalanche'
+external: ''
 tech:
   - ReactJs
   - Solidity
