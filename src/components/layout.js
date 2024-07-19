@@ -30,10 +30,12 @@ const useBodyClassChangeListener = callback => {
 };
 
 const saveThemeToLocalStorage = theme => {
-  localStorage.setItem('isDarkMode', theme);
+  if (typeof window !== 'undefined') {
+    localStorage.setItem('isDarkMode', theme);
+  }
 };
 
-const getThemeFromLocalStorage = () => localStorage.getItem('isDarkMode') === 'true';
+const getThemeFromLocalStorage = () => typeof window !== 'undefined' && localStorage.getItem('isDarkMode') === 'true';
 
 const Layout = ({ children, location }) => {
   const isHome = location.pathname === '/';
@@ -76,7 +78,7 @@ const Layout = ({ children, location }) => {
     setIsDarkMode(!isDarkMode);
   };
 
-  const bodyClassName = useMemo(() => isDarkMode ? 'dark-theme' : 'light-theme', [isDarkMode]);
+  const bodyClassName = useMemo(() => (isDarkMode ? 'dark-theme' : 'light-theme'), [isDarkMode]);
 
   document.body.className = bodyClassName;
   saveThemeToLocalStorage(isDarkMode);
