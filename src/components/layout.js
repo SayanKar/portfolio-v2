@@ -36,7 +36,7 @@ const saveThemeToLocalStorage = theme => {
 
 const getThemeFromLocalStorage = () => {
   if (typeof window !== 'undefined') {
-    return localStorage.getItem('isDarkMode') === 'true';
+    return localStorage.getItem('isDarkMode') !== 'false';
   }
   return true;
 };

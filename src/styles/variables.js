@@ -40,7 +40,7 @@ const variables = css`
       --pink: #f57dff;
       --blue: #1987c7;
       --image-filter-bg-color: #00000;
-      --nav-bg-color: rgba(255, 255, 255, 0.5);
+      --nav-bg-color: rgba(255, 255, 255, 0.85);
       --selection-bg-color: #e8f3ff;
     }
 
