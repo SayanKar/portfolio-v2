@@ -19,6 +19,8 @@ import {
 import IconYoutube from './youtube';
 import IconLight from './light';
 import IconDark from './dark';
+import IconDiscord from './discord';
+import IconTelegram from './telegram';
 
 const Icon = ({ name }) => {
   switch (name) {
@@ -56,6 +58,10 @@ const Icon = ({ name }) => {
       return <IconLight />;
     case 'Dark':
       return <IconDark />;
+    case 'Discord':
+      return <IconDiscord />;
+    case 'Telegram':
+      return <IconTelegram />;
     default:
       return <IconExternal />;
   }

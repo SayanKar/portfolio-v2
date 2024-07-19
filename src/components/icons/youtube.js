@@ -4,7 +4,7 @@ const IconYoutube = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     role="img"
-    viewBox="0 0 45 55"
+    viewBox="2 5 55 55"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
@@ -12,7 +12,7 @@ const IconYoutube = () => (
     strokeLinejoin="round"
     className="feather feather-youtube">
     <title>Youtube</title>
-    <g>
+    <g transform="scale(1.3)">
       <path
         d="M39.256,6.5H9.744C4.371,6.5,0,10.885,0,16.274v16.451c0,5.39,4.371,9.774,9.744,9.774h29.512
 			c5.373,0,9.744-4.385,9.744-9.774V16.274C49,10.885,44.629,6.5,39.256,6.5z M47,32.726c0,4.287-3.474,7.774-7.744,7.774H9.744

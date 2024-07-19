@@ -18,6 +18,14 @@ module.exports = {
       name: 'Linkedin',
       url: 'https://www.linkedin.com/in/sayan-kar-',
     },
+    {
+      name: 'Discord',
+      url: 'https://discordapp.com/users/616880360382267415',
+    },
+    {
+      name: 'Telegram',
+      url: 'https://telegram.me/S3CR37G8057',
+    },
   ],
 
   navLinks: [

@@ -17,3 +17,5 @@ export { default as IconTwitter } from './twitter';
 export { default as IconYoutube } from './youtube';
 export { default as IconLight } from './light';
 export { default as IconDark } from './dark';
+export { default as IconTelegram } from './telegram';
+export { default as IconDiscord } from './discord';

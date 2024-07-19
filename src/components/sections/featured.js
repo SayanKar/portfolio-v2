@@ -229,7 +229,7 @@ const StyledProject = styled.li`
       }
 
       svg {
-        width: 20px;
+        width: 30px;
         height: 20px;
       }
     }
