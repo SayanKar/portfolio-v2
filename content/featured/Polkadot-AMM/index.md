@@ -12,6 +12,6 @@ tech:
   - MUI (Material UI)
 ---
 
-This tutorial project will guide developers in building an Automated Market Maker (AMM) dApp on a substrate-based chain with contract-pallet support. Learn to develop the AMM using ink!, a Rust-based eDSL, and deploy it on Jupiter A1 of Patract’s public testnet via https://polkadot.js.org/apps. Integrate the smart contract with a React application using the polkadot.js module and browser extension.
+This tutorial guides developers in building an Automated Market Maker (AMM) dApp on a substrate-based chain using ink! and deploying it on Jupiter A1 via polkadot.js.
 
-Key features include Provide, Withdraw, and Swap functionalities, along with trading fees to incentivize liquidity providers and slippage tolerance for trader protection. This AMM handles transactions between two tokens, managing balances internally rather than directly interacting with external tokens.
+Integrate the smart contract with a React application using polkadot.js tools. Key features include Provide, Withdraw, Swap, trading fees, and slippage tolerance, managing transactions between two tokens internally.

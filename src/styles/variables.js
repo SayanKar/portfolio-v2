@@ -2,20 +2,47 @@ import { css } from 'styled-components';
 
 const variables = css`
   :root {
-    --dark-navy: #020c1b;
-    --navy: #09090b;
-    --light-navy: #0f0f12;
-    --lightest-navy: #1c1c1f;
-    --navy-shadow: rgba(2, 12, 27, 0.7);
-    --dark-slate: #495670;
-    --slate: #667080;
-    --light-slate: #8892a8;
-    --lightest-slate: #b0b8cc;
-    --white: #d6e0f0;
-    --green: #1987c7; /* Replacing green with blue */
-    --green-tint: rgba(79, 154, 255, 0.1); /* Replacing green tint with blue tint */
-    --pink: #f57dff;
-    --blue: #1987c7;
+    .dark-theme {
+      --dark-navy: #020c1b;
+      --navy: #09090b;
+      --light-navy: #0f0f12;
+      --lightest-navy: #1c1c1f;
+      --navy-shadow: rgba(2, 12, 27, 0.7);
+      --dark-slate: #495670;
+      --slate: #667080;
+      --light-slate: #8892a8;
+      --lightest-slate: #b0b8cc;
+      --project-title-color: #ffffff;
+      --white: #d6e0f0;
+      --green: #1987c7; /* Replacing green with blue */
+      --green-tint: rgba(79, 154, 255, 0.1); /* Replacing green tint with blue tint */
+      --pink: #f57dff;
+      --blue: #1987c7;
+      --image-filter-bg-color: #09090b;
+      --nav-bg-color: rgba(9, 9, 11, 0.85);
+      --selection-bg-color: #1c1c1f;
+    }
+
+    .light-theme {
+      --dark-navy: #020c1b;
+      --navy: #ffffff;
+      --light-navy: #0f0f12;
+      --lightest-navy: #1c1c1f;
+      --navy-shadow: rgba(2, 12, 27, 0.7);
+      --dark-slate: #495670;
+      --slate: #667080;
+      --light-slate: #8892a8;
+      --lightest-slate: #000000;
+      --project-title-color: #ffffff;
+      --white: #d6e0f0;
+      --green: #1987c7; /* Replacing green with blue */
+      --green-tint: rgba(79, 154, 255, 0.1); /* Replacing green tint with blue tint */
+      --pink: #f57dff;
+      --blue: #1987c7;
+      --image-filter-bg-color: #00000;
+      --nav-bg-color: rgba(255, 255, 255, 0.5);
+      --selection-bg-color: #e8f3ff;
+    }
 
     --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui,
       sans-serif;

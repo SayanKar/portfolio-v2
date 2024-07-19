@@ -17,6 +17,8 @@ import {
   IconTwitter,
 } from '@components/icons';
 import IconYoutube from './youtube';
+import IconLight from './light';
+import IconDark from './dark';
 
 const Icon = ({ name }) => {
   switch (name) {
@@ -50,6 +52,10 @@ const Icon = ({ name }) => {
       return <IconStar />;
     case 'Twitter':
       return <IconTwitter />;
+    case 'Light':
+      return <IconLight />;
+    case 'Dark':
+      return <IconDark />;
     default:
       return <IconExternal />;
   }

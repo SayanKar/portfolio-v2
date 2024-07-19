@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import { navLinks } from '@config';
 import { KEY_CODES } from '@utils';
 import { useOnClickOutside } from '@hooks';
+import { Icon } from '@components/icons';
+import PropTypes from 'prop-types';
 
 const StyledMenu = styled.div`
   display: none;
@@ -98,7 +100,7 @@ const StyledSidebar = styled.aside`
     width: min(75vw, 400px);
     height: 100vh;
     outline: 0;
-    background-color: var(--light-navy);
+    background-color: var(--nav-bg-color);
     box-shadow: -10px 0px 30px -15px var(--navy-shadow);
     z-index: 9;
     transform: translateX(${props => (props.menuOpen ? 0 : 100)}vw);
@@ -155,7 +157,7 @@ const StyledSidebar = styled.aside`
   }
 `;
 
-const Menu = () => {
+const Menu = ({ toggleDarkMode, isDarkMode }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
@@ -238,7 +240,9 @@ const Menu = () => {
   return (
     <StyledMenu>
       <Helmet>
-        <body className={menuOpen ? 'blur' : ''} />
+        <body
+          className={`${menuOpen ? 'blur' : ''} ${isDarkMode ? 'dark-theme' : 'light-theme'}`}
+        />
       </Helmet>
 
       <div ref={wrapperRef}>
@@ -265,7 +269,21 @@ const Menu = () => {
                 ))}
               </ol>
             )}
-
+            {
+              <div
+                onClick={toggleDarkMode}
+                style={{ height: '25px', width: '25px' }}
+                role="button"
+                tabIndex="0"
+                onKeyDown={e => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    toggleDarkMode();
+                  }
+                }}
+                aria-label="Toogle mode">
+                {<Icon name={!isDarkMode ? 'Dark' : 'Light'} />}
+              </div>
+            }
             <a
               href="https://drive.google.com/file/d/1jGtmqIavUp2Tt2brnUA-IsZ0Vqle_rNr/view?usp=sharing"
               className="resume-link">
@@ -276,6 +294,11 @@ const Menu = () => {
       </div>
     </StyledMenu>
   );
+};
+
+Menu.propTypes = {
+  toggleDarkMode: PropTypes.func,
+  isDarkMode: PropTypes.bool,
 };
 
 export default Menu;

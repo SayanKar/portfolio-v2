@@ -15,3 +15,5 @@ export { default as IconPlayStore } from './playstore';
 export { default as IconStar } from './star';
 export { default as IconTwitter } from './twitter';
 export { default as IconYoutube } from './youtube';
+export { default as IconLight } from './light';
+export { default as IconDark } from './dark';

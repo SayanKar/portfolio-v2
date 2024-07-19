@@ -12,8 +12,6 @@ tech:
   - MUI (Material UI)
 ---
 
-Gencom offers a gamified platform for creating and owning NFTs through decentralized collaboration.
+Gencom offers a gamified platform for creating and owning NFTs through decentralized collaboration. Users bid on pixels, earning profits and fractional NFT ownership in our Play-to-Earn (P2E) model.
 
-Users bid on pixels to own and color them, earning profits from sales and fractional NFT ownership in our Play-to-Earn (P2E) model.
-
-Our dynamic NFTs, developed using ink! smart contracts, polkadot.js, and React, sustain value beyond the game with a dynamic state for the secondary market.
+Our dynamic NFTs, built with ink!, polkadot.js, and React, maintain value beyond the game for a secondary market.

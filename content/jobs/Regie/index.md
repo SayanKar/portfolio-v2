@@ -1,7 +1,7 @@
 ---
 date: '2023-12-25'
 title: 'Software Engineer | Full Stack'
-company: 'Regia.ai'
+company: 'Regie.ai'
 location: 'Bangalore'
 range: 'December 2023 - Present'
 url: 'https://www.regie.ai/'

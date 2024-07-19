@@ -100,7 +100,7 @@ const StyledPic = styled.div`
     &:before {
       top: 0;
       left: 0;
-      background-color: var(--navy);
+      background-color: var(--image-filter-bg-color);
       mix-blend-mode: screen;
     }
 
@@ -136,6 +136,8 @@ const About = () => {
     'MySQL',
     'Elasticsearch',
     'Kafka',
+    'Solidity',
+    'Ink!',
   ];
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -145,9 +147,9 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Sayan Kar, and I'm passionate about building impactful digital
+              Hello! My name is Sayan Kar, and I’m passionate about building impactful digital
               solutions. My journey in software development began during my college years at IIIT
-              Guwahati, where I pursued my Bachelors in Computer Science and Engineering, graduating
+              Guwahati, where I pursued a Bachelor’s in Computer Science and Engineering, graduating
               with a strong foundation in coding and problem-solving. I have a keen interest in
               designing robust backend systems and exploring blockchain technologies to innovate and
               create secure, decentralized solutions.
@@ -155,11 +157,11 @@ const About = () => {
 
             <p>
               Fast-forward to today, and I’ve had the privilege of working at{' '}
-              <a href="https://www.toppr.com/"> Toppr</a>,{' '}
-              <a href="https://www.byjus.com/"> Byjus</a> an edtech startup. My primary focus these
-              days is improving our Chrome extension at{' '}
+              <a href="https://www.toppr.com/"> Toppr</a> and{' '}
+              <a href="https://www.byjus.com/"> Byjus</a>, prominent edtech startups. Currently, my
+              primary focus is on enhancing our Chrome extension at{' '}
               <a href="https://www.regie.ai/"> Regie.ai</a> to deliver a seamless user experience
-              and focusing on our product, Autopilot.
+              and improving our product, Autopilot.
             </p>
 
             <p>Here are a few technologies I’ve been working with recently:</p>

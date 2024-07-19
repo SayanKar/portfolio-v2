@@ -12,8 +12,6 @@ tech:
   - MUI (Material UI)
 ---
 
-FracNL is a DeFi platform where users can borrow by locking a fraction of their NFTs as collateral. Lenders participate against listings, backed by a credit score system.
+FracNL is a DeFi platform enabling users to borrow by locking fractional NFTs as collateral, with lenders participating against listings.
 
-Borrowers must provide additional tokens based on their credit score as security. If the loan defaults, these tokens compensate lenders; otherwise, they go to the platform as fees.
-
-Borrowers retain partial ownership of their collateral if a loan defaults, receiving a portion back based on the principal amount returned after full interest payment within the loan period.
+Borrowers provide additional tokens as security. Even if a loan defaults, borrowers retain partial ownership of their collateral based on the principal repaid after full interest payment.

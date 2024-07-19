@@ -7,7 +7,7 @@ import { navLinks } from '@config';
 import { loaderDelay } from '@utils';
 import { useScrollDirection, usePrefersReducedMotion } from '@hooks';
 import { Menu } from '@components';
-import { IconLogo, IconHex } from '@components/icons';
+import { Icon, IconLogo, IconHex } from '@components/icons';
 
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
@@ -17,7 +17,7 @@ const StyledHeader = styled.header`
   padding: 0px 50px;
   width: 100%;
   height: var(--nav-height);
-  background-color: rgba(9, 9, 11, 0.85);
+  background-color: var(--nav-bg-color);
   filter: none !important;
   pointer-events: auto !important;
   user-select: auto !important;
@@ -38,7 +38,7 @@ const StyledHeader = styled.header`
       css`
         height: var(--nav-scroll-height);
         transform: translateY(0px);
-        background-color: rgba(9, 9, 11, 0.85);
+        background-color: var(--nav-bg-color);
         box-shadow: 0 10px 30px -10px var(--navy-shadow);
       `};
 
@@ -117,6 +117,13 @@ const StyledLinks = styled.div`
     display: none;
   }
 
+  .modeSelector {
+    &:hover,
+    &:focus {
+      color: var(--blue);
+    }
+  }
+
   ol {
     ${({ theme }) => theme.mixins.flexBetween};
     padding: 0;
@@ -150,7 +157,7 @@ const StyledLinks = styled.div`
   }
 `;
 
-const Nav = ({ isHome }) => {
+const Nav = ({ isHome, toggleDarkMode, isDarkMode }) => {
   const [isMounted, setIsMounted] = useState(!isHome);
   const scrollDirection = useScrollDirection('down');
   const [scrolledToTop, setScrolledToTop] = useState(true);
@@ -234,7 +241,7 @@ const Nav = ({ isHome }) => {
               <div>{ResumeLink}</div>
             </StyledLinks>
 
-            <Menu />
+            <Menu toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
           </>
         ) : (
           <>
@@ -260,7 +267,31 @@ const Nav = ({ isHome }) => {
                     ))}
                 </TransitionGroup>
               </ol>
-
+              <TransitionGroup component={null}>
+                {isMounted && (
+                  <CSSTransition classNames={fadeDownClass} timeout={timeout}>
+                    <div
+                      className="modeSelector"
+                      style={{
+                        height: '25px',
+                        width: '25px',
+                        cursor: 'pointer',
+                        margin: '0px 15px 4px 15px',
+                      }}
+                      onClick={toggleDarkMode}
+                      role="button"
+                      tabIndex="0"
+                      onKeyDown={e => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          toggleDarkMode();
+                        }
+                      }}
+                      aria-label="Toggle mode">
+                      {<Icon name={!isDarkMode ? 'Dark' : 'Light'} />}
+                    </div>
+                  </CSSTransition>
+                )}
+              </TransitionGroup>
               <TransitionGroup component={null}>
                 {isMounted && (
                   <CSSTransition classNames={fadeDownClass} timeout={timeout}>
@@ -275,7 +306,7 @@ const Nav = ({ isHome }) => {
             <TransitionGroup component={null}>
               {isMounted && (
                 <CSSTransition classNames={fadeClass} timeout={timeout}>
-                  <Menu />
+                  <Menu toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
                 </CSSTransition>
               )}
             </TransitionGroup>
@@ -288,6 +319,8 @@ const Nav = ({ isHome }) => {
 
 Nav.propTypes = {
   isHome: PropTypes.bool,
+  toggleDarkMode: PropTypes.func,
+  isDarkMode: PropTypes.bool,
 };
 
 export default Nav;
