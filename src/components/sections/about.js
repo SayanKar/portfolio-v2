@@ -149,7 +149,7 @@ const About = () => {
             <p>
               Hello! My name is Sayan Kar, and I’m passionate about building impactful digital
               solutions. My journey in software development began during my college years at IIIT
-              Guwahati, where I pursued a Bachelor’s in Computer Science and Engineering, graduating
+              Guwahati, where I pursued Bachelor’s in Computer Science and Engineering, graduating
               with a strong foundation in coding and problem-solving. I have a keen interest in
               designing robust backend systems and exploring blockchain technologies to innovate and
               create secure, decentralized solutions.
