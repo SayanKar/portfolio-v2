@@ -35,7 +35,8 @@ const saveThemeToLocalStorage = theme => {
   }
 };
 
-const getThemeFromLocalStorage = () => typeof window !== 'undefined' && localStorage.getItem('isDarkMode') === 'true';
+const getThemeFromLocalStorage = () =>
+  typeof window !== 'undefined' && localStorage.getItem('isDarkMode') === 'true';
 
 const Layout = ({ children, location }) => {
   const isHome = location.pathname === '/';
@@ -80,13 +81,17 @@ const Layout = ({ children, location }) => {
 
   const bodyClassName = useMemo(() => (isDarkMode ? 'dark-theme' : 'light-theme'), [isDarkMode]);
 
-  document.body.className = bodyClassName;
-  saveThemeToLocalStorage(isDarkMode);
+  useEffect(() => {
+    document.body.className = bodyClassName;
+    saveThemeToLocalStorage(isDarkMode);
+  }, []);
 
   useBodyClassChangeListener(className => {
     if (!className || className === '') {
-      document.body.className = bodyClassName;
-      saveThemeToLocalStorage(isDarkMode);
+      if (window !== undefined) {
+        document.body.className = bodyClassName;
+        saveThemeToLocalStorage(isDarkMode);
+      }
     }
   });
 
