@@ -30,13 +30,15 @@ const useBodyClassChangeListener = callback => {
 };
 
 const saveThemeToLocalStorage = theme => {
-  if (typeof window !== 'undefined') {
-    localStorage.setItem('isDarkMode', theme);
-  }
+  localStorage.setItem('isDarkMode', theme);
 };
 
-const getThemeFromLocalStorage = () =>
-  typeof window !== 'undefined' && localStorage.getItem('isDarkMode') === 'true';
+const getThemeFromLocalStorage = () => {
+  if (typeof window !== 'undefined') {
+    return localStorage.getItem('isDarkMode') === 'true';
+  }
+  return true;
+};
 
 const Layout = ({ children, location }) => {
   const isHome = location.pathname === '/';
@@ -84,14 +86,12 @@ const Layout = ({ children, location }) => {
   useEffect(() => {
     document.body.className = bodyClassName;
     saveThemeToLocalStorage(isDarkMode);
-  }, []);
+  });
 
   useBodyClassChangeListener(className => {
     if (!className || className === '') {
-      if (window !== undefined) {
-        document.body.className = bodyClassName;
-        saveThemeToLocalStorage(isDarkMode);
-      }
+      document.body.className = bodyClassName;
+      saveThemeToLocalStorage(isDarkMode);
     }
   });
 
